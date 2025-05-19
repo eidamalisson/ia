@@ -1,6 +1,6 @@
-const caixa principal = document.querySelector
-conts caixa principal = documet
-conts
+const caixaPrincipal = document.querySelector(caixa-principal);
+conts caixaPerguntas = documet.query.selector("caixa-perguntas");
+conts caixaAlternativa =
 const
 const perguntas = [
 {
@@ -12,3 +12,11 @@ enunciado: "pergunta2"
 alternativa: ["alternativa1","altermativa2"]
 }
 ]
+let atual=0;
+let perguntaatual;
+
+function mostrapergunta(){
+perguntaAtual = perguntas[atual];
+caixaPerguntas.textContent = PerguntaAtual.enunciado;
+}
+mostrapergunta();
