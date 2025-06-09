@@ -15,10 +15,17 @@ alternativa: ["alternativa1","altermativa2"]
 ]
 let atual=0;
 let perguntaatual;
+let historiaFinal="";
 
 function mostrapergunta(){
+    if (atual>= perguntaatual.lenght){
+        mostraResultado();
+        return;
+    }
 perguntaAtual = perguntas[atual];
 caixaPerguntas.textContent = PerguntaAtual.enunciado;
+caixaAlternativas.textContent="";
+textoResultado.textContent="";
 mostraAlternativa();
 }
 function mostrapergunta{
@@ -26,9 +33,20 @@ for(const alternativa of perguntaatual.alternativa){
 
 const botaoalternativa = document.createElement("button");
 botaoalternativa.testcontent = alternativa.texto;
+botaoalternativa.addEventListener("click",()=>respostaSelecionada(alternativa))
+    atual++;
+    mostrapergunta();
+})
 caixaAlternativas.appendChild(botaoalternativa);
+  }
+}
 
+Function respostaSelecionada(opçaoSelecionada){
+const afirmacao = opcaoSelecionada.afirmacao;
+historiaFinal +afirmacao +" ";
+atual++
 }
-}
+
+
 
 mostrapergunta();
