@@ -47,6 +47,13 @@ historiaFinal +afirmacao +" ";
 atual++
 }
 
+function mostraResultado(){
+caixaPerguntas.textContent = "conclusao...";
+textoResultado.textContent = historiaFinal;
+caixaAlternativas.textContent ="";
+
+
+}
 
 
 mostrapergunta();
